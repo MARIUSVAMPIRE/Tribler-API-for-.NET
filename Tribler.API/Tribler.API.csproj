@@ -5,6 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
+    <Description>Tribler 8+ API for .NET</Description>
   </PropertyGroup>
 
   <ItemGroup>

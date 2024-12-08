@@ -92,7 +92,7 @@ public partial class Main
                         }),
                         new ToolStripMenuItem("Remove", Properties.Resources.Remove, async delegate (object sender, EventArgs e) {
                             DataGridViewRow row = (DataGridViewRow)((ToolStripMenuItem)sender).GetCurrentParent().Tag;
-                            if(MessageBox.Show(String.Format("Remove selected torrent?\r\n{0}", row.Cells["Name"].Value.ToString()), "Remove torrents", MessageBoxButtons.OKCancel) == DialogResult.OK) {
+                            if(MessageBox.Show("Remove selected torrent?", row.Cells["Name"].Value.ToString(), MessageBoxButtons.OKCancel) == DialogResult.OK) {
                                 DataGridViewCellCollection currentCells = row.Cells;
                                 await downloads.Remove(currentCells["Infohash"].Value.ToString());
                             }
@@ -158,6 +158,8 @@ public partial class Main
                     {
                         DataGridViewRow currentRow = DataGridView_List.Rows[index];
                         if (!downloads.LIST.Exists(information => String.Equals(currentRow.Cells["Infohash"].Value, information.InfoHash))) notExistRowList.Add(currentRow);
+                        Application.DoEvents();
+                        Thread.Sleep(10);
                     }
                     DataGridView_List.BeginInvoke((MethodInvoker)delegate ()
                     {
