@@ -17,3 +17,7 @@ if (await downloads.Get("", true, true, true))  //Get Download List
   }
 }
 ```
+
+#Links
+
+[Github](https://github.com/MARIUSVAMPIRE/Tribler-API-for-.NET)
