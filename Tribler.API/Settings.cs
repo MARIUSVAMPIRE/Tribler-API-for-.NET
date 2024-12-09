@@ -9,6 +9,7 @@ namespace Tribler.API
 
         public bool Loaded { get; private set; }
         public ApiClass Api { get; init; }
+        public bool Statistics { get; init; }
 
         public Settings()
         {
@@ -31,6 +32,7 @@ namespace Tribler.API
                         },
                         Key = Config.Api.Key
                     };
+                    Statistics = Config.Statistics;
                     Loaded = true;
                 }
             }
