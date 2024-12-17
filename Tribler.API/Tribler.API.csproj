@@ -14,8 +14,8 @@
     <PackageProjectUrl></PackageProjectUrl>
     <PackageIcon>tribler.png</PackageIcon>
     <RepositoryUrl>https://github.com/MARIUSVAMPIRE/Tribler-API-for-.NET</RepositoryUrl>
-    <AssemblyVersion>1.0.0.73</AssemblyVersion>
-    <FileVersion>1.0.0.73</FileVersion>
+    <AssemblyVersion>1.0.0.75</AssemblyVersion>
+    <FileVersion>1.0.0.75</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

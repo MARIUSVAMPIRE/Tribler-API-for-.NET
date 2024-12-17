@@ -4,10 +4,10 @@
     {
         public partial class TunnelCommunityClass
         {
-            internal class CircuitsClass
+            public class CircuitsClass
             {
-                public int Min { get; init; }
-                public int Max { get; init; }
+                internal int Min { get; init; }
+                internal int Max { get; init; }
             }
         }
     }

@@ -6,14 +6,14 @@
         {
             public partial class LibtorrentClass
             {
-                public List<int> Socks_listen_ports {  get; set; }
+                public List<int> Socks_listen_ports { get; set; }
                 public int Port { get; init; }
                 public int Proxy_type { get; init; }
                 public string Proxy_server { get; init; }
                 public string Proxy_auth { get; init; }
                 public int Max_connections_download { get; init; }
-                public float Max_download_rate { get; init; }
-                public float Max_upload_rate { get; init; }
+                public int Max_download_rate { get; init; }
+                public int Max_upload_rate { get; init; }
                 public bool Utp { get; init; }
                 public bool Dht { get; init; }
                 public int Dht_readiness_timeout { get; init; }
