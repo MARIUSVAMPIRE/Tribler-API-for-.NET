@@ -16,7 +16,7 @@ namespace Tribler.API.Test.WinFrom
         [STAThread]
         static void Main()
         {
-            using Mutex mutex = new Mutex(true, "Tribler UI", out bool createdNew);
+            using Mutex mutex = new(true, "Tribler UI", out bool createdNew);
             if (createdNew)
             {
                 Application.EnableVisualStyles();

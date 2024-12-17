@@ -18,8 +18,8 @@ public partial class Main
     private int marginWidth = 0;
     private int updateFlagIndex = 0;
     readonly SpinningCircles spinningCircles = new();
-    private List<Downloads.Container.Information> dataList = [];
-    System.Windows.Forms.Timer getListTimer = new() { Interval = 5000 };
+    internal List<Downloads.Container.Information> dataList = [];
+    readonly System.Windows.Forms.Timer getListTimer = new() { Interval = 5000 };
 
     private void InitializeDataGridView_List()
     {
