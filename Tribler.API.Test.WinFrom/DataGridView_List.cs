@@ -101,7 +101,9 @@ public partial class Main
                             DataGridViewRow row = (DataGridViewRow)((ToolStripMenuItem)sender).GetCurrentParent().Tag;
                             string destination =Convert.ToString(row.Cells["Destination"].Value);
                             string name =Convert.ToString(row.Cells["Name"].Value);
-                            System.Diagnostics.Process.Start(Path.Combine(destination, name));
+                            if(File.Exists(destination) || Directory.Exists(destination)) {
+                                Task.Run(()=> { System.Diagnostics.Process.Start(Path.Combine(destination, name)); });
+                            }else MessageBox.Show("Not Exist");
                         })
                     ]);
                     rows.Add(row);
@@ -189,6 +191,10 @@ public partial class Main
                     });
 
                     dataList = downloads.LIST;
+                }
+                else
+                {
+                    DataGridView_List.Rows.Clear();
                 }
             });
         };
@@ -309,7 +315,11 @@ public partial class Main
         DataGridViewRow row = DataGridView_List.Rows[e.RowIndex];
         string destination = Convert.ToString(row.Cells["Destination"].Value);
         string name = Convert.ToString(row.Cells["Name"].Value);
-        System.Diagnostics.Process.Start(Path.Combine(destination, name));
+        if (File.Exists(destination) || Directory.Exists(destination))
+        {
+            Task.Run(() => { System.Diagnostics.Process.Start(Path.Combine(destination, name)); });
+        }
+        else MessageBox.Show("Not Exist");
     }
 
     private void DataGridView_List_Scroll(object sender, ScrollEventArgs e)
@@ -318,7 +328,7 @@ public partial class Main
 
     private void DataGridView_List_DoubleClick(object sender, EventArgs e)
     {
-        
+
     }
 }
 

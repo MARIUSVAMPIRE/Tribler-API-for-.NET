@@ -14,8 +14,21 @@
     <PackageProjectUrl></PackageProjectUrl>
     <PackageIcon>tribler.png</PackageIcon>
     <RepositoryUrl>https://github.com/MARIUSVAMPIRE/Tribler-API-for-.NET</RepositoryUrl>
-    <AssemblyVersion>1.0.1.75</AssemblyVersion>
-    <FileVersion>1.0.1.75</FileVersion>
+    <AssemblyVersion>1.0.1.11</AssemblyVersion>
+    <FileVersion>1.0.1.11</FileVersion>
+    <Version>1.0.8</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <ShouldCreateLogs>True</ShouldCreateLogs>
+    <AdvancedSettingsExpanded>False</AdvancedSettingsExpanded>
+    <UpdateAssemblyVersion>False</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>False</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>False</UpdateAssemblyInfoVersion>
+    <UpdatePackageVersion>True</UpdatePackageVersion>
+    <PackageVersionSettings>AssemblyVersion.IncrementWithAutoReset.None</PackageVersionSettings>
+    <AssemblyInfoVersionType>SettingsVersion</AssemblyInfoVersionType>
+    <InheritWinAppVersionFrom>None</InheritWinAppVersionFrom>
   </PropertyGroup>
 
   <ItemGroup>
